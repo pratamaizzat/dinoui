@@ -1,16 +1,65 @@
 {
-  "name": "@dinoui/source",
+  "name": "@dinoui/project",
   "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
+  "description": "Component library with tailwindcss",
   "private": true,
+  "main": "index.js",
+  "workspaces": [
+    "packages/*",
+    "demo/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm -r sync",
+    "prepare": "husky install"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/pratamaizzat/dinoui/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pratamaizzat/dinoui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pratamaizzat/dinoui/issues/"
+  },
+  "keywords": [
+    "components",
+    "ui",
+    "component",
+    "component-library",
+    "ui-components",
+    "ui-framework",
+    "tailwind",
+    "tailwindcss",
+    "components-library"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@nx/js": "16.3.1",
     "@nx/workspace": "16.3.1",
+    "lint-staged": "^13.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-import-no-duplicates-prefix-resolved-path": "^2.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "nx": "16.3.1",
     "nx-cloud": "latest",
     "prettier": "^2.6.2",
-    "typescript": "~5.0.2"
-  }
+    "typescript": "~5.0.2",
+    "husky": "^8.0.0"
+  },
+  "packageManager": "pnpm@8.6.0",
+  "engines": {
+    "pnpm": ">=8.6.0",
+    "yarn": "Please use pnpm instead of yarn.",
+    "npm": "Please use pnpm instead of npm."
+  },
+  "type": "module"
 }
